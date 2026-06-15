@@ -88,6 +88,17 @@ vidpress/
 └── README.md
 ```
 
+
+
+## Contributing
+
+Contributions are totally welcome:) Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+Before submitting a pull request, please ensure:
+- All tests pass
+- Code is properly formatted
+- Documentation is updated
+
 ## License
 
 MIT
