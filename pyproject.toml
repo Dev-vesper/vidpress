@@ -10,7 +10,7 @@ readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 authors = [
-    {name = "Pourya", email = "your.email@example.com"}
+    {name = "Pourya", email = "pouryathesaymon@gmail.com"}
 ]
 keywords = ["video", "compression", "ffmpeg", "cli"]
 classifiers = [
