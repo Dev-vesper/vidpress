@@ -22,6 +22,17 @@ class VideoCodecConfig:
         "av1": ("libaom-av1", "good", 35),
     }
 
+    # libvpx/libaom encoders reject -preset; they expose their own speed/quality option
+    PRESET_OPTIONS = {
+        "libvpx-vp9": "-deadline",
+        "libaom-av1": "-usage",
+    }
+
+    @property
+    def preset_option(self) -> str:
+        """FFmpeg option name carrying the preset for this encoder."""
+        return self.PRESET_OPTIONS.get(self.codec, "-preset")
+
     @classmethod
     def from_codec_name(cls, name: str) -> "VideoCodecConfig":
         """Create config from codec alias name."""

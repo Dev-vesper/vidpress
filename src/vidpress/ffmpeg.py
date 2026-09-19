@@ -106,7 +106,7 @@ class FFmpeg:
         args += [
             "-c:v",
             cfg.codec,
-            "-preset",
+            cfg.preset_option,
             cfg.preset,
             "-crf",
             str(cfg.crf),
@@ -123,14 +123,15 @@ class FFmpeg:
         args: list[str] = []
         if opts.start:
             args += ["-ss", opts.start]
-        args += ["-i", str(src)]
+        # -to must stay before -i: as an output option it would be relative to the seeked start
         if opts.end:
             args += ["-to", opts.end]
+        args += ["-i", str(src)]
         cfg = opts.codec_config
         args += [
             "-c:v",
             cfg.codec,
-            "-preset",
+            cfg.preset_option,
             cfg.preset,
             "-crf",
             str(cfg.crf),
@@ -147,7 +148,7 @@ class FFmpeg:
             str(src),
             "-c:v",
             codec_config.codec,
-            "-preset",
+            codec_config.preset_option,
             codec_config.preset,
             "-crf",
             str(codec_config.crf),
