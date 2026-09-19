@@ -76,7 +76,7 @@ vidpress codecs
 |-------|-----------|-------|
 | `h264` | libx264  | Most compatible, great for streaming |
 | `h265` | libx265  | ~40% smaller than h264, slower encode |
-| `vp9`  | libvp9   | Open-source, ideal for WebM / web |
+| `vp9`  | libvpx-vp9 | Open-source, ideal for WebM / web |
 | `av1`  | libaom-av1 | Best compression ratio, very slow encode |
 
 ## Project structure

@@ -18,7 +18,7 @@ class VideoCodecConfig:
     PRESETS = {
         "h264": ("libx264", "slow", 28),
         "h265": ("libx265", "slow", 28),
-        "vp9": ("libvp9", "good", 33),
+        "vp9": ("libvpx-vp9", "good", 33),
         "av1": ("libaom-av1", "good", 35),
     }
 
